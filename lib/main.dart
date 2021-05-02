@@ -101,9 +101,196 @@ class _HomeState extends State<Home> {
                 Column(
                   children: [
                     Row(
-                      children: [],
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          height: 111,
+                          width: 100,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                top: 20,
+                                bottom: 20,
+                              ),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    "assets/tua_renta.png",
+                                    width: 38,
+                                    height: 38,
+                                  ),
+                                  SizedBox(
+                                    height: 12,
+                                  ),
+                                  Text(
+                                    "Tua Renta",
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 111,
+                          width: 100,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                top: 20,
+                                bottom: 20,
+                              ),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    "assets/nutrisi.png",
+                                    width: 38,
+                                    height: 38,
+                                  ),
+                                  SizedBox(
+                                    height: 12,
+                                  ),
+                                  Text(
+                                    "Nutrisi",
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 111,
+                          width: 100,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                top: 20,
+                                bottom: 20,
+                              ),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    "assets/hati.png",
+                                    width: 38,
+                                    height: 38,
+                                  ),
+                                  SizedBox(
+                                    height: 12,
+                                  ),
+                                  Text(
+                                    "Hati",
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 22,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          height: 111,
+                          width: 100,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                top: 20,
+                                bottom: 20,
+                              ),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    "assets/medical.png",
+                                    width: 38,
+                                    height: 38,
+                                  ),
+                                  SizedBox(
+                                    height: 12,
+                                  ),
+                                  Text(
+                                    "Medicine",
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 111,
+                          width: 100,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                top: 20,
+                                bottom: 20,
+                              ),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    "assets/mata.png",
+                                    width: 38,
+                                    height: 38,
+                                  ),
+                                  SizedBox(
+                                    height: 12,
+                                  ),
+                                  Text(
+                                    "Mata",
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 111,
+                          width: 100,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                top: 20,
+                                bottom: 20,
+                              ),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    "assets/berat.png",
+                                    width: 38,
+                                    height: 38,
+                                  ),
+                                  SizedBox(
+                                    height: 12,
+                                  ),
+                                  Text(
+                                    "Body Fat",
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Text(
+                  "Our top doctors",
+                ),
+                SizedBox(
+                  height: 12,
                 ),
               ],
             ),
