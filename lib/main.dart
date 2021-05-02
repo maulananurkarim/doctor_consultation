@@ -87,7 +87,20 @@ class _HomeState extends State<Home> {
                       height: 12,
                     ),
                     Container(
-                      color: Colors.white,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(21),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: lightBlueColor.withOpacity(0.5),
+                            spreadRadius: 0,
+                            blurRadius: 15,
+                            offset: Offset(0, 15),
+                          ),
+                        ],
+                      ),
                       child: Padding(
                         padding: const EdgeInsets.all(11),
                         child: Row(
@@ -130,6 +143,12 @@ class _HomeState extends State<Home> {
                               height: 111,
                               width: 100,
                               child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                  ),
+                                ),
                                 onPressed: () {},
                                 child: Padding(
                                   padding: const EdgeInsets.only(
@@ -148,6 +167,12 @@ class _HomeState extends State<Home> {
                                       ),
                                       Text(
                                         "Tua Renta",
+                                        style: GoogleFonts.poppins(
+                                          textStyle: titleTextStyle.copyWith(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.normal,
+                                          ),
+                                        ),
                                       ),
                                     ],
                                   ),
