@@ -1,5 +1,6 @@
 import 'package:doctor_consultation/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,274 +28,383 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [lightBlueColor, Colors.white],
-            ),
+        body: RefreshIndicator(
+          onRefresh: () async => Future.delayed(
+            Duration(seconds: 1),
           ),
-          child: Padding(
-            padding: const EdgeInsets.only(
-              left: 16,
-              right: 16,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: 24,
+          child: SingleChildScrollView(
+            physics: const AlwaysScrollableScrollPhysics(),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [lightBlueColor, Colors.white],
                 ),
-                Row(
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  left: 16,
+                  right: 16,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Image.asset(
-                      "assets/user_pic.png",
-                      height: 52,
-                      width: 52,
+                    SizedBox(
+                      height: 24,
+                    ),
+                    Row(
+                      children: [
+                        Image.asset(
+                          "assets/user_pic.png",
+                          height: 52,
+                          width: 52,
+                        ),
+                        SizedBox(
+                          width: 12,
+                        ),
+                        Text(
+                          "Howdy, Tamara!",
+                          style: GoogleFonts.poppins(
+                            textStyle: titleTextStyle.copyWith(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(
-                      width: 12,
+                      height: 30,
                     ),
                     Text(
-                      "Howdy, Tamara!",
+                      "Find the professional doctor,\nquickly and promising.",
+                      style: GoogleFonts.poppins(
+                        textStyle: titleTextStyle,
+                      ),
                     ),
-                  ],
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                Text(
-                  "Find the professional doctor,\nquickly and promising.",
-                ),
-                SizedBox(
-                  height: 12,
-                ),
-                Container(
-                  color: Colors.white,
-                  child: Padding(
-                    padding: const EdgeInsets.all(11),
-                    child: Row(
-                      children: [
-                        Text(
-                          "Search by specialist",
-                        ),
-                        Spacer(),
-                        Image.asset(
-                          "assets/icon_search.png",
-                          height: 18,
-                          width: 18,
-                        ),
-                      ],
+                    SizedBox(
+                      height: 12,
                     ),
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                Text(
-                  "Browse by category",
-                ),
-                SizedBox(
-                  height: 12,
-                ),
-                Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    Container(
+                      color: Colors.white,
+                      child: Padding(
+                        padding: const EdgeInsets.all(11),
+                        child: Row(
+                          children: [
+                            Text(
+                              "Search by specialist",
+                              style: GoogleFonts.poppins(
+                                textStyle: subtitleTextStyle.copyWith(
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ),
+                            Spacer(),
+                            Image.asset(
+                              "assets/icon_search.png",
+                              height: 18,
+                              width: 18,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      "Browse by category",
+                      style: GoogleFonts.poppins(
+                          textStyle: titleTextStyle.copyWith(
+                              fontSize: 14, fontWeight: FontWeight.normal)),
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Column(
                       children: [
-                        SizedBox(
-                          height: 111,
-                          width: 100,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                top: 20,
-                                bottom: 20,
-                              ),
-                              child: Column(
-                                children: [
-                                  Image.asset(
-                                    "assets/tua_renta.png",
-                                    width: 38,
-                                    height: 38,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SizedBox(
+                              height: 111,
+                              width: 100,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 20,
+                                    bottom: 20,
                                   ),
-                                  SizedBox(
-                                    height: 12,
+                                  child: Column(
+                                    children: [
+                                      Image.asset(
+                                        "assets/tua_renta.png",
+                                        width: 38,
+                                        height: 38,
+                                      ),
+                                      SizedBox(
+                                        height: 12,
+                                      ),
+                                      Text(
+                                        "Tua Renta",
+                                      ),
+                                    ],
                                   ),
-                                  Text(
-                                    "Tua Renta",
-                                  ),
-                                ],
+                                ),
                               ),
                             ),
-                          ),
+                            SizedBox(
+                              height: 111,
+                              width: 100,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 20,
+                                    bottom: 20,
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Image.asset(
+                                        "assets/nutrisi.png",
+                                        width: 38,
+                                        height: 38,
+                                      ),
+                                      SizedBox(
+                                        height: 12,
+                                      ),
+                                      Text(
+                                        "Nutrisi",
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 111,
+                              width: 100,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 20,
+                                    bottom: 20,
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Image.asset(
+                                        "assets/hati.png",
+                                        width: 38,
+                                        height: 38,
+                                      ),
+                                      SizedBox(
+                                        height: 12,
+                                      ),
+                                      Text(
+                                        "Hati",
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                         SizedBox(
-                          height: 111,
-                          width: 100,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                top: 20,
-                                bottom: 20,
-                              ),
-                              child: Column(
-                                children: [
-                                  Image.asset(
-                                    "assets/nutrisi.png",
-                                    width: 38,
-                                    height: 38,
-                                  ),
-                                  SizedBox(
-                                    height: 12,
-                                  ),
-                                  Text(
-                                    "Nutrisi",
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
+                          height: 22,
                         ),
-                        SizedBox(
-                          height: 111,
-                          width: 100,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                top: 20,
-                                bottom: 20,
-                              ),
-                              child: Column(
-                                children: [
-                                  Image.asset(
-                                    "assets/hati.png",
-                                    width: 38,
-                                    height: 38,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SizedBox(
+                              height: 111,
+                              width: 100,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 20,
+                                    bottom: 20,
                                   ),
-                                  SizedBox(
-                                    height: 12,
+                                  child: Column(
+                                    children: [
+                                      Image.asset(
+                                        "assets/medical.png",
+                                        width: 38,
+                                        height: 38,
+                                      ),
+                                      SizedBox(
+                                        height: 12,
+                                      ),
+                                      Text(
+                                        "Medicine",
+                                      ),
+                                    ],
                                   ),
-                                  Text(
-                                    "Hati",
-                                  ),
-                                ],
+                                ),
                               ),
                             ),
-                          ),
+                            SizedBox(
+                              height: 111,
+                              width: 100,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 20,
+                                    bottom: 20,
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Image.asset(
+                                        "assets/mata.png",
+                                        width: 38,
+                                        height: 38,
+                                      ),
+                                      SizedBox(
+                                        height: 12,
+                                      ),
+                                      Text(
+                                        "Mata",
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 111,
+                              width: 100,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 20,
+                                    bottom: 20,
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Image.asset(
+                                        "assets/berat.png",
+                                        width: 38,
+                                        height: 38,
+                                      ),
+                                      SizedBox(
+                                        height: 12,
+                                      ),
+                                      Text(
+                                        "Body Fat",
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
                     SizedBox(
-                      height: 22,
+                      height: 30,
+                    ),
+                    Text(
+                      "Our top doctors",
+                    ),
+                    SizedBox(
+                      height: 12,
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SizedBox(
-                          height: 111,
-                          width: 100,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                top: 20,
-                                bottom: 20,
-                              ),
-                              child: Column(
-                                children: [
-                                  Image.asset(
-                                    "assets/medical.png",
-                                    width: 38,
-                                    height: 38,
-                                  ),
-                                  SizedBox(
-                                    height: 12,
-                                  ),
-                                  Text(
-                                    "Medicine",
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
+                        Image.asset(
+                          "assets/user_pic1.png",
+                          height: 52,
+                          width: 52,
                         ),
                         SizedBox(
-                          height: 111,
-                          width: 100,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                top: 20,
-                                bottom: 20,
-                              ),
-                              child: Column(
-                                children: [
-                                  Image.asset(
-                                    "assets/mata.png",
-                                    width: 38,
-                                    height: 38,
-                                  ),
-                                  SizedBox(
-                                    height: 12,
-                                  ),
-                                  Text(
-                                    "Mata",
-                                  ),
-                                ],
-                              ),
+                          width: 12,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Alessya Camella",
                             ),
-                          ),
+                            Text(
+                              "Eye Specialist",
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 18,
+                    ),
+                    Row(
+                      children: [
+                        Image.asset(
+                          "assets/user_pic2.png",
+                          height: 52,
+                          width: 52,
                         ),
                         SizedBox(
-                          height: 111,
-                          width: 100,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                top: 20,
-                                bottom: 20,
-                              ),
-                              child: Column(
-                                children: [
-                                  Image.asset(
-                                    "assets/berat.png",
-                                    width: 38,
-                                    height: 38,
-                                  ),
-                                  SizedBox(
-                                    height: 12,
-                                  ),
-                                  Text(
-                                    "Body Fat",
-                                  ),
-                                ],
-                              ),
+                          width: 12,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Jamal Luddin",
                             ),
-                          ),
+                            Text(
+                              "Smile Specialist",
+                            ),
+                          ],
                         ),
                       ],
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 30,
-                ),
-                Text(
-                  "Our top doctors",
-                ),
-                SizedBox(
-                  height: 12,
-                ),
-              ],
+              ),
             ),
           ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Image.asset(
+                "assets/home.png",
+                height: 24,
+                width: 24,
+              ),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Image.asset(
+                "assets/notification.png",
+                height: 24,
+                width: 24,
+              ),
+              label: 'Business',
+            ),
+            BottomNavigationBarItem(
+              icon: Image.asset(
+                "assets/bookmarked.png",
+                height: 24,
+                width: 24,
+              ),
+              label: 'School',
+            ),
+            BottomNavigationBarItem(
+              icon: Image.asset(
+                "assets/profile.png",
+                height: 24,
+                width: 24,
+              ),
+              label: 'School',
+            ),
+          ],
         ),
       ),
     );
