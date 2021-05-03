@@ -1,6 +1,7 @@
 import 'package:doctor_consultation/main.dart';
 import 'package:doctor_consultation/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Rating extends StatefulWidget {
   @override
@@ -21,21 +22,31 @@ class _RatingState extends State<Rating> {
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(40),
+            padding: const EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 100,
+                  height: 80,
                 ),
                 Text(
                   "Hope you are",
+                  style: GoogleFonts.poppins(
+                    textStyle: titleTextStyle.copyWith(
+                      fontSize: 32,
+                    ),
+                  ),
                 ),
                 Text(
                   "feeling better now!",
+                  style: GoogleFonts.poppins(
+                    textStyle: titleTextStyle.copyWith(
+                      fontSize: 32,
+                    ),
+                  ),
                 ),
                 SizedBox(
-                  height: 70,
+                  height: 50,
                 ),
                 Image.asset(
                   "assets/user_pic1.png",
@@ -47,9 +58,19 @@ class _RatingState extends State<Rating> {
                 ),
                 Text(
                   "Alessya Camella",
+                  style: GoogleFonts.poppins(
+                    textStyle: titleTextStyle.copyWith(
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
                 ),
                 Text(
                   "Eye Specialist",
+                  style: GoogleFonts.poppins(
+                    textStyle: subtitleTextStyle.copyWith(
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: 30,
@@ -62,22 +83,41 @@ class _RatingState extends State<Rating> {
                 SizedBox(
                   height: 50,
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => Home(),
+                SizedBox(
+                  width: 145,
+                  height: 45,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: blueColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
                       ),
-                    );
-                  },
-                  child: Text(
-                    "Rate Alessya",
+                    ),
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => Home(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "Rate Alessya",
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   ),
                 ),
                 Spacer(),
                 Text(
                   "Report for Bad Service",
+                  style: GoogleFonts.poppins(
+                    textStyle: subtitleTextStyle.copyWith(
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
               ],
             ),
