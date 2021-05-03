@@ -149,6 +149,10 @@ class _HomeState extends State<Home> {
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(21),
                                   ),
+                                  shadowColor: Color(
+                                    0xffE1EDF2,
+                                  ).withOpacity(0.5),
+                                  elevation: 50,
                                 ),
                                 onPressed: () {},
                                 child: Padding(
@@ -189,6 +193,10 @@ class _HomeState extends State<Home> {
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(21),
                                   ),
+                                  shadowColor: Color(
+                                    0xffE1EDF2,
+                                  ).withOpacity(0.5),
+                                  elevation: 50,
                                 ),
                                 onPressed: () {},
                                 child: Padding(
@@ -229,6 +237,10 @@ class _HomeState extends State<Home> {
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(21),
                                   ),
+                                  shadowColor: Color(
+                                    0xffE1EDF2,
+                                  ).withOpacity(0.5),
+                                  elevation: 50,
                                 ),
                                 onPressed: () {},
                                 child: Padding(
@@ -277,6 +289,10 @@ class _HomeState extends State<Home> {
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(21),
                                   ),
+                                  shadowColor: Color(
+                                    0xffE1EDF2,
+                                  ).withOpacity(0.5),
+                                  elevation: 50,
                                 ),
                                 onPressed: () {},
                                 child: Padding(
@@ -317,6 +333,10 @@ class _HomeState extends State<Home> {
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(21),
                                   ),
+                                  shadowColor: Color(
+                                    0xffE1EDF2,
+                                  ).withOpacity(0.5),
+                                  elevation: 50,
                                 ),
                                 onPressed: () {},
                                 child: Padding(
@@ -357,6 +377,10 @@ class _HomeState extends State<Home> {
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(21),
                                   ),
+                                  shadowColor: Color(
+                                    0xffE1EDF2,
+                                  ).withOpacity(0.5),
+                                  elevation: 50,
                                 ),
                                 onPressed: () {},
                                 child: Padding(
