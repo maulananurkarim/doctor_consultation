@@ -1,4 +1,4 @@
-import 'package:doctor_consultation/rating.dart';
+import 'package:doctor_consultation/pages/rating.dart';
 import 'package:doctor_consultation/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
