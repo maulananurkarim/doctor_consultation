@@ -43,8 +43,6 @@ class _HomeState extends State<Home> {
                   colors: [lightBlueColor, Colors.white],
                 ),
               ),
-              // width: double.infinity,
-              // height: double.infinity,
               child: Padding(
                 padding: const EdgeInsets.only(
                   left: 16,
