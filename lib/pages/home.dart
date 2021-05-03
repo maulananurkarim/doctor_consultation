@@ -513,7 +513,7 @@ class _HomeState extends State<Home> {
                 height: 24,
                 width: 24,
               ),
-              label: 'Business',
+              label: 'Notification',
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
@@ -521,7 +521,7 @@ class _HomeState extends State<Home> {
                 height: 24,
                 width: 24,
               ),
-              label: 'School',
+              label: 'Bookmark',
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
@@ -529,7 +529,7 @@ class _HomeState extends State<Home> {
                 height: 24,
                 width: 24,
               ),
-              label: 'School',
+              label: 'Profile',
             ),
           ],
         ),
