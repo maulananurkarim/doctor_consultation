@@ -20,6 +20,8 @@ class _VideoCallState extends State<VideoCall> {
               fit: BoxFit.fill,
             ),
           ),
+          width: double.infinity,
+          height: double.infinity,
           child: Padding(
             padding: const EdgeInsets.only(
               left: 16,

@@ -21,6 +21,8 @@ class _RatingState extends State<Rating> {
               colors: [lightBlueColor, Colors.white],
             ),
           ),
+          width: double.infinity,
+          height: double.infinity,
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: Column(
@@ -114,6 +116,7 @@ class _RatingState extends State<Rating> {
                 Text(
                   "Report for Bad Service",
                   style: GoogleFonts.poppins(
+                    decoration: TextDecoration.underline,
                     textStyle: subtitleTextStyle.copyWith(
                       fontSize: 16,
                     ),
