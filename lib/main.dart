@@ -1,4 +1,5 @@
 import 'package:doctor_consultation/theme.dart';
+import 'package:doctor_consultation/video_call.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -183,6 +184,12 @@ class _HomeState extends State<Home> {
                               height: 111,
                               width: 100,
                               child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                  ),
+                                ),
                                 onPressed: () {},
                                 child: Padding(
                                   padding: const EdgeInsets.only(
@@ -201,6 +208,12 @@ class _HomeState extends State<Home> {
                                       ),
                                       Text(
                                         "Nutrisi",
+                                        style: GoogleFonts.poppins(
+                                          textStyle: titleTextStyle.copyWith(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.normal,
+                                          ),
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -211,6 +224,12 @@ class _HomeState extends State<Home> {
                               height: 111,
                               width: 100,
                               child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                  ),
+                                ),
                                 onPressed: () {},
                                 child: Padding(
                                   padding: const EdgeInsets.only(
@@ -229,6 +248,12 @@ class _HomeState extends State<Home> {
                                       ),
                                       Text(
                                         "Hati",
+                                        style: GoogleFonts.poppins(
+                                          textStyle: titleTextStyle.copyWith(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.normal,
+                                          ),
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -247,6 +272,12 @@ class _HomeState extends State<Home> {
                               height: 111,
                               width: 100,
                               child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                  ),
+                                ),
                                 onPressed: () {},
                                 child: Padding(
                                   padding: const EdgeInsets.only(
@@ -265,6 +296,12 @@ class _HomeState extends State<Home> {
                                       ),
                                       Text(
                                         "Medicine",
+                                        style: GoogleFonts.poppins(
+                                          textStyle: titleTextStyle.copyWith(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.normal,
+                                          ),
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -275,6 +312,12 @@ class _HomeState extends State<Home> {
                               height: 111,
                               width: 100,
                               child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                  ),
+                                ),
                                 onPressed: () {},
                                 child: Padding(
                                   padding: const EdgeInsets.only(
@@ -293,6 +336,12 @@ class _HomeState extends State<Home> {
                                       ),
                                       Text(
                                         "Mata",
+                                        style: GoogleFonts.poppins(
+                                          textStyle: titleTextStyle.copyWith(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.normal,
+                                          ),
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -303,6 +352,12 @@ class _HomeState extends State<Home> {
                               height: 111,
                               width: 100,
                               child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                  ),
+                                ),
                                 onPressed: () {},
                                 child: Padding(
                                   padding: const EdgeInsets.only(
@@ -321,6 +376,12 @@ class _HomeState extends State<Home> {
                                       ),
                                       Text(
                                         "Body Fat",
+                                        style: GoogleFonts.poppins(
+                                          textStyle: titleTextStyle.copyWith(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.normal,
+                                          ),
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -336,32 +397,57 @@ class _HomeState extends State<Home> {
                     ),
                     Text(
                       "Our top doctors",
+                      style: GoogleFonts.poppins(
+                        textStyle: titleTextStyle.copyWith(
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
                     ),
                     SizedBox(
                       height: 12,
                     ),
-                    Row(
-                      children: [
-                        Image.asset(
-                          "assets/user_pic1.png",
-                          height: 52,
-                          width: 52,
-                        ),
-                        SizedBox(
-                          width: 12,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Alessya Camella",
-                            ),
-                            Text(
-                              "Eye Specialist",
-                            ),
-                          ],
-                        ),
-                      ],
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => VideoCall(),
+                          ),
+                        );
+                      },
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/user_pic1.png",
+                            height: 52,
+                            width: 52,
+                          ),
+                          SizedBox(
+                            width: 12,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Alessya Camella",
+                                style: GoogleFonts.poppins(
+                                  textStyle: titleTextStyle.copyWith(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                "Eye Specialist",
+                                style: GoogleFonts.poppins(
+                                  textStyle: subtitleTextStyle,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(
                       height: 18,
@@ -381,9 +467,18 @@ class _HomeState extends State<Home> {
                           children: [
                             Text(
                               "Jamal Luddin",
+                              style: GoogleFonts.poppins(
+                                textStyle: titleTextStyle.copyWith(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
                             ),
                             Text(
                               "Smile Specialist",
+                              style: GoogleFonts.poppins(
+                                textStyle: subtitleTextStyle,
+                              ),
                             ),
                           ],
                         ),
@@ -403,7 +498,7 @@ class _HomeState extends State<Home> {
                 height: 24,
                 width: 24,
               ),
-              label: 'Home',
+              label: "Home",
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
