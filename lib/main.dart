@@ -1,4 +1,4 @@
-import 'package:doctor_consultation/pages/home.dart';
+import 'package:doctor_consultation/package.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,5 +14,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-

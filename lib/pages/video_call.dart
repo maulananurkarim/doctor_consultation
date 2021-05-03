@@ -1,7 +1,4 @@
-import 'package:doctor_consultation/pages/rating.dart';
-import 'package:doctor_consultation/theme.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+part of 'package:doctor_consultation/package.dart';
 
 class VideoCall extends StatefulWidget {
   @override
