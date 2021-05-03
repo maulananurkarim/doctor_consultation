@@ -57,7 +57,8 @@ class _VideoCallState extends State<VideoCall> {
                         Text(
                           "Eye Specialist",
                           style: GoogleFonts.poppins(
-                            textStyle: subtitleTextStyle,
+                            textStyle:
+                                subtitleTextStyle.copyWith(color: Colors.white),
                           ),
                         ),
                       ],
